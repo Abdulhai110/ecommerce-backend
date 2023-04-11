@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "./node_modules/.bin/tsc-watch --onSuccess \"node ./dist/app.js\"",
     "startDev": "./node_modules/.bin/tsc-watch --onSuccess \"node ./dist/app.js\"",
-    "build": "npm run clean && npm i && npm i request && ./node_modules/.bin/tsc && npm run assets && cd dist && node app.js"
+    "build": "npm run clean && npm i && npm i request && ./node_modules/.bin/tsc && npm run assets && cd dist"
   },
   "keywords": [],
   "author": "",
