@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -rf dist",
+    "assets": "cp package.json dist/ && cp .env dist/",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./dist/app.js\"",
-    "startDev": "./node_modules/.bin/tsc-watch --onSuccess \"node ./dist/app.js\""
+    "start": "./node_modules/.bin/tsc-watch --onSuccess \"node ./dist/app.js\"",
+    "startDev": "./node_modules/.bin/tsc-watch --onSuccess \"node ./dist/app.js\"",
+    "build": "npm run clean && ./node_modules/.bin/tsc && npm run assets && cd dist && pm2 restart app.js"
   },
   "keywords": [],
   "author": "",
@@ -32,7 +35,7 @@
     "passport-google-oauth20": "^2.0.0",
     "razorpay-typescript": "^1.0.12",
     "sequelize": "^6.29.3",
-    "stripe": "^11.17.0",
+    "stripe": "^11.16.0",
     "tsc-watch": "^6.0.0",
     "uninstall": "^0.0.0"
   },
